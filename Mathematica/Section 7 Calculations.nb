@@ -1,0 +1,566 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21848,        558]
+NotebookOptionsPosition[     19540,        508]
+NotebookOutlinePosition[     19895,        524]
+CellTagsIndexPosition[     19852,        521]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Calculations for Section 7 of \[OpenCurlyDoubleQuote]Asymptotic \
+approximations for the close evaluation of double-layer potentials,\
+\[CloseCurlyDoubleQuote] by C. Carvalho, S. Khatri, and A. D. Kim (2018)\
+\>", "Title",
+ CellChangeTimes->{{3.741378820057659*^9, 3.7413788400103197`*^9}, {
+   3.7441441718774633`*^9, 3.744144171994793*^9}, 
+   3.747575476702557*^9},ExpressionUUID->"56024631-05f5-495c-a681-\
+99970531d835"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Details for the Inner expansion of the Henyey-Greenstein scattering kernel\
+\>", "Section",
+ CellChangeTimes->{{3.741400770829833*^9, 3.7414007789684687`*^9}, {
+  3.747581082354822*^9, 
+  3.747581085314055*^9}},ExpressionUUID->"28008564-a80a-45d3-94bd-\
+090209980382"],
+
+Cell["\<\
+Compute the expansion given in (7.14) for the kernel of the inner expansion.\
+\>", "Text",
+ CellChangeTimes->{{3.741402343888163*^9, 3.741402349090016*^9}, {
+  3.7414025537881207`*^9, 3.741402566822724*^9}, {3.744144175090905*^9, 
+  3.744144175258355*^9}},ExpressionUUID->"3e603cdd-4dba-478c-9844-\
+83a8ff1c7f1f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{"\[Epsilon]", ">", "0"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Series", "[", " ", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "2"], 
+       FractionBox[
+        RowBox[{"1", "-", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"1", "-", "\[Epsilon]"}], ")"}], "2"]}], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"1", "-", "\[Epsilon]"}], ")"}], "2"], "-", 
+           RowBox[{"2", 
+            RowBox[{"(", 
+             RowBox[{"1", "-", "\[Epsilon]"}], ")"}], " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"\[Epsilon]", " ", "\[CapitalTheta]"}], "]"}]}]}], ")"}], 
+         RowBox[{"3", "/", "2"}]]], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"\[Epsilon]", " ", "\[CapitalTheta]"}], "]"}], " ", 
+       "\[Epsilon]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7414007912942395`*^9, 3.7414008969791346`*^9}, {
+   3.741400984716981*^9, 3.7414009900621862`*^9}, 3.7414010549015007`*^9, {
+   3.74140179401974*^9, 3.7414017945170193`*^9}, {3.7414018418498497`*^9, 
+   3.741401842943714*^9}, {3.7414021052730455`*^9, 3.741402106315787*^9}, {
+   3.7414028082022057`*^9, 3.741402816321827*^9}, {3.7440527581508627`*^9, 
+   3.744052759332899*^9}, 3.74405283121616*^9, {3.7459574708875403`*^9, 
+   3.7459574967623014`*^9}, {3.7459674377031493`*^9, 3.745967438497785*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"6fbcdbdb-87ec-4d54-aec3-57f9d50e8545"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  InterpretationBox[
+   RowBox[{
+    FractionBox["\[CapitalTheta]", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        SuperscriptBox["\[CapitalTheta]", "2"]}], ")"}], 
+      RowBox[{"3", "/", "2"}]]], "+", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "\[CapitalTheta]"}], "+", 
+        RowBox[{"2", " ", 
+         SuperscriptBox["\[CapitalTheta]", "3"]}]}], ")"}], " ", 
+      "\[Epsilon]"}], 
+     RowBox[{"2", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         SuperscriptBox["\[CapitalTheta]", "2"]}], ")"}], 
+       RowBox[{"5", "/", "2"}]]}]], "+", 
+    InterpretationBox[
+     SuperscriptBox[
+      RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+     SeriesData[$CellContext`\[Epsilon], 0, {}, 0, 2, 1],
+     Editable->False]}],
+   SeriesData[$CellContext`\[Epsilon], 
+    0, {$CellContext`\[CapitalTheta] (1 + $CellContext`\[CapitalTheta]^2)^
+      Rational[-3, 2], 
+     Rational[1, 2] (1 + $CellContext`\[CapitalTheta]^2)^
+      Rational[-5, 2] (-$CellContext`\[CapitalTheta] + 
+      2 $CellContext`\[CapitalTheta]^3)}, 0, 2, 1],
+   Editable->False], "}"}]], "Output",
+ CellChangeTimes->{{3.741400871643697*^9, 3.7414008985442944`*^9}, {
+   3.741400986402466*^9, 3.74140099082421*^9}, 3.7414010558550434`*^9, {
+   3.7414017141093235`*^9, 3.741401730912016*^9}, 3.7414017952770343`*^9, 
+   3.741401843484152*^9, 3.741402106928409*^9, 3.7414028181907473`*^9, 
+   3.744052859750198*^9, {3.745957484686883*^9, 3.745957497953678*^9}, 
+   3.7459575904075327`*^9, 3.745967439328557*^9, 3.745967585182541*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"4070b457-5e40-4c96-85ee-4969d25bb3d8"]
+}, Open  ]],
+
+Cell["\<\
+Compute the integral given in (7.17) to determine the leading-order \
+asymptotic behavior of the inner expansion.\
+\>", "Text",
+ CellChangeTimes->{{3.7414023591461287`*^9, 3.7414023649756155`*^9}, {
+  3.741402573168589*^9, 3.741402582179529*^9}, {3.744144178138789*^9, 
+  3.7441441782430687`*^9}},ExpressionUUID->"5676b44f-e276-4c3e-83d8-\
+8470f52774fe"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Epsilon]", ">", "0"}], " ", "&&", " ", 
+    RowBox[{"\[Delta]", " ", ">", "0"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"Series", "[", 
+     RowBox[{
+      RowBox[{"Integrate", "[", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          InterpretationBox[
+           RowBox[{
+            FractionBox["\[CapitalTheta]", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                SuperscriptBox["\[CapitalTheta]", "2"]}], ")"}], 
+              RowBox[{"3", "/", "2"}]]], "+", 
+            FractionBox[
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "\[CapitalTheta]"}], "+", 
+                RowBox[{"2", " ", 
+                 SuperscriptBox["\[CapitalTheta]", "3"]}]}], ")"}], " ", 
+              "\[Epsilon]"}], 
+             RowBox[{"2", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"1", "+", 
+                 SuperscriptBox["\[CapitalTheta]", "2"]}], ")"}], 
+               RowBox[{"5", "/", "2"}]]}]], "+", 
+            InterpretationBox[
+             SuperscriptBox[
+              RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+             SeriesData[$CellContext`\[Epsilon], 0, {}, 0, 2, 1],
+             Editable->False]}],
+           
+           SeriesData[$CellContext`\[Epsilon], 
+            0, {$CellContext`\[CapitalTheta] (
+               1 + $CellContext`\[CapitalTheta]^2)^Rational[-3, 2], 
+             Rational[1, 2] (1 + $CellContext`\[CapitalTheta]^2)^
+              Rational[-5, 2] (-$CellContext`\[CapitalTheta] + 
+              2 $CellContext`\[CapitalTheta]^3)}, 0, 2, 1],
+           Editable->False], ")"}], 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["\[Epsilon]", "2"], 
+           SuperscriptBox["\[CapitalTheta]", "2"]}], "4"]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"\[CapitalTheta]", ",", "0", ",", 
+          RowBox[{"\[Delta]", "/", "\[Epsilon]"}]}], "}"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Epsilon]", ",", "0", ",", "2"}], "}"}]}], "]"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.741401427432564*^9, 3.7414015366576877`*^9}, {
+  3.741401853760458*^9, 3.7414018577651052`*^9}, {3.741402129751068*^9, 
+  3.741402198702351*^9}, {3.7414028225082264`*^9, 3.741402853453466*^9}, {
+  3.7459577928533974`*^9, 3.745957845552363*^9}, {3.7459579378448315`*^9, 
+  3.74595795652801*^9}, {3.745958235111266*^9, 3.7459582392793016`*^9}, {
+  3.7459675891241817`*^9, 3.7459676637348633`*^9}, {3.7459691427322493`*^9, 
+  3.7459691443459234`*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"9ca50f08-0e3a-48b1-9c3c-8014b7b84068"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  InterpretationBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[Delta]", " ", "\[Epsilon]"}], "4"], "+", 
+    RowBox[{
+     FractionBox["1", "4"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "2"}], "+", "\[Delta]"}], ")"}], " ", 
+     SuperscriptBox["\[Epsilon]", "2"]}], "+", 
+    InterpretationBox[
+     SuperscriptBox[
+      RowBox[{"O", "[", "\[Epsilon]", "]"}], "3"],
+     SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 3, 1],
+     Editable->False]}],
+   SeriesData[$CellContext`\[Epsilon], 0, {
+    Rational[1, 4] $CellContext`\[Delta], 
+     Rational[1, 4] (-2 + $CellContext`\[Delta])}, 1, 3, 1],
+   Editable->False], "}"}]], "Output",
+ CellChangeTimes->{{3.7414014770121765`*^9, 3.7414015375290017`*^9}, 
+   3.741401738062983*^9, {3.7414018550960045`*^9, 3.741401858553193*^9}, {
+   3.7414021772593203`*^9, 3.741402200355733*^9}, 3.741402855601167*^9, {
+   3.745957816571773*^9, 3.7459578466352787`*^9}, {3.7459579412671494`*^9, 
+   3.7459579598765993`*^9}, 3.7459582413969736`*^9, {3.7459676296914835`*^9, 
+   3.745967665475995*^9}, 3.745969147377793*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"74f3d075-a401-4082-8faa-466e47dcb9e7"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Details for the Outer expansion of the Henyey-Greenstein scattering kernel\
+\>", "Section",
+ CellChangeTimes->{{3.7413788699303913`*^9, 3.741378881297668*^9}, {
+  3.7414007616173553`*^9, 3.7414007622259755`*^9}, {3.747581088940962*^9, 
+  3.747581092323311*^9}},ExpressionUUID->"ff21c2f0-bd4e-4a13-827e-\
+8a926a3cd746"],
+
+Cell["\<\
+Compute the expansion given in (7.18) for the kernel of the outer expansion.\
+\>", "Text",
+ CellChangeTimes->{{3.741391963004346*^9, 3.7413919772131157`*^9}, {
+  3.7414025880080266`*^9, 3.741402593258976*^9}, {3.744144180587082*^9, 
+  3.744144180683111*^9}, {3.744144263977396*^9, 3.744144264102468*^9}, {
+  3.744144328857699*^9, 3.7441443433224363`*^9}, {3.74758051525954*^9, 
+  3.747580522742836*^9}},ExpressionUUID->"d9b96259-7ee9-4218-9153-\
+ca1068ff25f1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"outerkernel", " ", "=", " ", 
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "2"], 
+     FractionBox[
+      RowBox[{"1", "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "-", "\[Epsilon]"}], ")"}], "2"]}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"1", " ", "+", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"1", "-", "\[Epsilon]"}], ")"}], "2"], "-", 
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", "\[Epsilon]"}], ")"}], " ", 
+          RowBox[{"Cos", "[", "\[Theta]", "]"}]}]}], ")"}], 
+       RowBox[{"3", "/", "2"}]]]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Epsilon]", ",", "0", ",", "2"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.74137893462146*^9, 3.741379020369564*^9}, {
+  3.7414022312277904`*^9, 3.7414022657484865`*^9}, {3.741402408802085*^9, 
+  3.741402412409702*^9}, {3.744053250756116*^9, 3.744053252136965*^9}, {
+  3.7440533077646093`*^9, 3.7440533090439873`*^9}, {3.7459574526092043`*^9, 
+  3.745957453811946*^9}, {3.7459579844353886`*^9, 3.745957984569372*^9}, {
+  3.745958765146064*^9, 3.74595876680042*^9}, {3.745958811990173*^9, 
+  3.745958812177104*^9}, {3.74596806836374*^9, 3.7459680810535736`*^9}, {
+  3.7459681528123565`*^9, 3.745968230607093*^9}, {3.74758068617174*^9, 
+  3.747580688867794*^9}, {3.747580720057802*^9, 3.747580774362961*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"8df6081f-1706-46fa-8918-20ec9b8292c9"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["\[Epsilon]", 
+    RowBox[{"2", " ", 
+     SqrtBox["2"], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ")"}], 
+      RowBox[{"3", "/", "2"}]]}]], "-", 
+   FractionBox[
+    SuperscriptBox["\[Epsilon]", "2"], 
+    RowBox[{"2", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       SqrtBox["2"], " ", 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         RowBox[{"Cos", "[", "\[Theta]", "]"}]}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ")"}]}], ")"}]}]], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Epsilon]", "]"}], "3"],
+    SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 3, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Epsilon], 0, {
+   Rational[1, 2] 
+    2^Rational[-1, 2] (1 - Cos[$CellContext`\[Theta]])^Rational[-3, 2], 
+    Rational[-1, 2] 
+    2^Rational[-1, 2] (1 - Cos[$CellContext`\[Theta]])^Rational[-1, 2]/(-1 + 
+    Cos[$CellContext`\[Theta]])}, 1, 3, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.7475807639016027`*^9, 3.74758077492507*^9}},
+ CellLabel->"Out[3]=",ExpressionUUID->"a8ec9ac9-aeb4-4ab7-853d-8004e9eb78e6"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Correction to the outer expansion", "Section",
+ CellChangeTimes->{{3.741379320722196*^9, 
+  3.741379325715373*^9}},ExpressionUUID->"10ec241d-014e-4ea7-b7e5-\
+f7143fca00f7"],
+
+Cell["\<\
+Compute the expansion given in (7.20) for the kernel of the outer expansion \
+in the angular cone about 0 \[LessEqual] \[CapitalTheta] \[LessEqual] \
+\[Delta].\
+\>", "Text",
+ CellChangeTimes->{{3.741391988013789*^9, 3.7413919983693576`*^9}, {
+  3.7414023881592197`*^9, 3.7414023886445484`*^9}, {3.7414026000671062`*^9, 
+  3.7414026859292517`*^9}, {3.744144183851224*^9, 3.7441441839713*^9}, {
+  3.7475808201274567`*^9, 
+  3.747580821365687*^9}},ExpressionUUID->"00626750-1eea-4d8e-92b3-\
+de9a6a370c9e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Epsilon]", ">", "0"}], " ", "&&", " ", 
+    RowBox[{"\[CapitalTheta]", ">", "0"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Series", "[", 
+     RowBox[{
+      RowBox[{
+       FractionBox[
+        RowBox[{"(", 
+         RowBox[{"\[Epsilon]", "+", 
+          SuperscriptBox["\[Epsilon]", "2"]}], ")"}], 
+        RowBox[{"2", 
+         SqrtBox["2"], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"1", "-", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"\[Epsilon]", " ", "\[CapitalTheta]"}], "]"}]}], ")"}], 
+          RowBox[{"3", "/", "2"}]]}]], 
+       RowBox[{"Sin", "[", 
+        RowBox[{"\[Epsilon]", " ", "\[CapitalTheta]"}], "]"}], " ", 
+       "\[Epsilon]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Epsilon]", ",", "0", ",", "1"}], "}"}]}], "]"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.741379330819322*^9, 3.7413794425890293`*^9}, {
+  3.741379479142268*^9, 3.741379494630754*^9}, {3.741390686221754*^9, 
+  3.741390688963041*^9}, {3.741390746384694*^9, 3.7413907909901867`*^9}, {
+  3.741391478248047*^9, 3.7413914811537724`*^9}, {3.741391538049002*^9, 
+  3.7413915531651845`*^9}, {3.7413917369997*^9, 3.7413919013665457`*^9}, {
+  3.741402274645131*^9, 3.7414023219438667`*^9}, {3.741402877477311*^9, 
+  3.7414028907164955`*^9}, {3.7414037889538674`*^9, 3.7414037892817793`*^9}, {
+  3.7459581498848734`*^9, 3.7459581768765574`*^9}, {3.7459683230008974`*^9, 
+  3.7459683238604636`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"47234750-3e70-48a3-97fa-2b0ed0ba3346"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  InterpretationBox[
+   RowBox[{
+    FractionBox["1", 
+     SuperscriptBox["\[CapitalTheta]", "2"]], "+", 
+    FractionBox["\[Epsilon]", 
+     SuperscriptBox["\[CapitalTheta]", "2"]], "+", 
+    InterpretationBox[
+     SuperscriptBox[
+      RowBox[{"O", "[", "\[Epsilon]", "]"}], "2"],
+     SeriesData[$CellContext`\[Epsilon], 0, {}, 0, 2, 1],
+     Editable->False]}],
+   SeriesData[$CellContext`\[Epsilon], 
+    0, {$CellContext`\[CapitalTheta]^(-2), $CellContext`\[CapitalTheta]^(-2)},
+     0, 2, 1],
+   Editable->False], "}"}]], "Output",
+ CellChangeTimes->{{3.741379388268255*^9, 3.741379443473227*^9}, {
+   3.741379491437405*^9, 3.741379495536685*^9}, 3.7413906981123543`*^9, {
+   3.7413907533561764`*^9, 3.7413907922014103`*^9}, 3.7413914823038197`*^9, {
+   3.741391541533233*^9, 3.7413915540615215`*^9}, {3.741391757070031*^9, 
+   3.7413918577325487`*^9}, 3.741391902723115*^9, 3.741392007753245*^9, 
+   3.741402322643692*^9, {3.7414028843325224`*^9, 3.741402891536667*^9}, 
+   3.7414037899444942`*^9, {3.745958159127082*^9, 3.7459581774283795`*^9}, 
+   3.7459683275207977`*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"62d0cbb0-8dbc-484b-b92c-c0418dae4cb7"]
+}, Open  ]],
+
+Cell["\<\
+Compute the integral given in (7.20) for the contribution to the outer \
+expansion by the angular cone about 0 \[LessEqual] \[CapitalTheta] \
+\[LessEqual] \[Delta].\
+\>", "Text",
+ CellChangeTimes->{{3.7414025256403303`*^9, 3.741402540661272*^9}, {
+  3.74140271152528*^9, 3.7414027548955345`*^9}, {3.7441441878995533`*^9, 
+  3.744144188035419*^9}, {3.74758088495579*^9, 
+  3.747580885169229*^9}},ExpressionUUID->"7b85a7ec-4327-4e36-927d-\
+396a2dd30af6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Epsilon]", ">", "0"}], " ", "&&", " ", 
+    RowBox[{"\[Delta]", " ", ">", "0"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"Series", "[", 
+     RowBox[{
+      RowBox[{"Integrate", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          FractionBox[
+           RowBox[{"1", "+", "\[Epsilon]"}], 
+           SuperscriptBox["\[CapitalTheta]", "2"]], ")"}], 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["\[Epsilon]", "2"], 
+           SuperscriptBox["\[CapitalTheta]", "2"]}], "4"]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"\[CapitalTheta]", ",", "0", ",", 
+          RowBox[{"\[Delta]", "/", "\[Epsilon]"}]}], "}"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Epsilon]", ",", "0", ",", "2"}], "}"}]}], "]"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7413922311816626`*^9, 3.7413922534619107`*^9}, {
+   3.741402428933617*^9, 3.7414024854835863`*^9}, {3.741402897812394*^9, 
+   3.7414029139252152`*^9}, {3.7414034442202454`*^9, 3.7414034615132027`*^9}, 
+   3.7414037654854994`*^9, 3.7414037995740924`*^9, {3.7459581868811007`*^9, 
+   3.745958198194626*^9}, {3.7459588409365416`*^9, 3.7459588450927896`*^9}, {
+   3.745969115622568*^9, 3.745969132160247*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"5a02c992-3414-4aab-90a2-c07254f35bda"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  InterpretationBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[Delta]", " ", "\[Epsilon]"}], "4"], "+", 
+    FractionBox[
+     RowBox[{"\[Delta]", " ", 
+      SuperscriptBox["\[Epsilon]", "2"]}], "4"], "+", 
+    InterpretationBox[
+     SuperscriptBox[
+      RowBox[{"O", "[", "\[Epsilon]", "]"}], "3"],
+     SeriesData[$CellContext`\[Epsilon], 0, {}, 1, 3, 1],
+     Editable->False]}],
+   SeriesData[$CellContext`\[Epsilon], 0, {
+    Rational[1, 4] $CellContext`\[Delta], 
+     Rational[1, 4] $CellContext`\[Delta]}, 1, 3, 1],
+   Editable->False], "}"}]], "Output",
+ CellChangeTimes->{
+  3.741392254389331*^9, 3.741402486534376*^9, 3.741402916412814*^9, {
+   3.741403445199878*^9, 3.7414034631916957`*^9}, 3.7414037663387957`*^9, 
+   3.7414038002699423`*^9, 3.7459581997464657`*^9, 3.7459588455418806`*^9, {
+   3.7459691175284834`*^9, 3.745969132816302*^9}},
+ CellLabel->"Out[15]=",ExpressionUUID->"00f903e1-f3e9-4774-8aaf-2f0fb5a5c315"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 851},
+WindowMargins->{{22, Automatic}, {Automatic, 85}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 435, 8, 222, "Title",ExpressionUUID->"56024631-05f5-495c-a681-99970531d835"],
+Cell[CellGroupData[{
+Cell[1040, 34, 278, 6, 67, "Section",ExpressionUUID->"28008564-a80a-45d3-94bd-090209980382"],
+Cell[1321, 42, 323, 6, 35, "Text",ExpressionUUID->"3e603cdd-4dba-478c-9844-83a8ff1c7f1f"],
+Cell[CellGroupData[{
+Cell[1669, 52, 1666, 39, 57, "Input",ExpressionUUID->"6fbcdbdb-87ec-4d54-aec3-57f9d50e8545"],
+Cell[3338, 93, 1720, 42, 62, "Output",ExpressionUUID->"4070b457-5e40-4c96-85ee-4969d25bb3d8"]
+}, Open  ]],
+Cell[5073, 138, 364, 7, 35, "Text",ExpressionUUID->"5676b44f-e276-4c3e-83d8-8470f52774fe"],
+Cell[CellGroupData[{
+Cell[5462, 149, 2751, 65, 59, "Input",ExpressionUUID->"9ca50f08-0e3a-48b1-9c3c-8014b7b84068"],
+Cell[8216, 216, 1190, 27, 50, "Output",ExpressionUUID->"74f3d075-a401-4082-8faa-466e47dcb9e7"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9455, 249, 328, 6, 67, "Section",ExpressionUUID->"ff21c2f0-bd4e-4a13-827e-8a926a3cd746"],
+Cell[9786, 257, 470, 8, 35, "Text",ExpressionUUID->"d9b96259-7ee9-4218-9153-ca1068ff25f1"],
+Cell[CellGroupData[{
+Cell[10281, 269, 1503, 33, 57, "Input",ExpressionUUID->"8df6081f-1706-46fa-8918-20ec9b8292c9"],
+Cell[11787, 304, 1302, 37, 61, "Output",ExpressionUUID->"a8ec9ac9-aeb4-4ab7-853d-8004e9eb78e6"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13138, 347, 178, 3, 67, "Section",ExpressionUUID->"10ec241d-014e-4ea7-b7e5-f7143fca00f7"],
+Cell[13319, 352, 512, 10, 35, "Text",ExpressionUUID->"00626750-1eea-4d8e-92b3-de9a6a370c9e"],
+Cell[CellGroupData[{
+Cell[13856, 366, 1599, 37, 59, "Input",ExpressionUUID->"47234750-3e70-48a3-97fa-2b0ed0ba3346"],
+Cell[15458, 405, 1192, 25, 52, "Output",ExpressionUUID->"62d0cbb0-8dbc-484b-b92c-c0418dae4cb7"]
+}, Open  ]],
+Cell[16665, 433, 462, 9, 35, "Text",ExpressionUUID->"7b85a7ec-4327-4e36-927d-396a2dd30af6"],
+Cell[CellGroupData[{
+Cell[17152, 446, 1376, 32, 52, "Input",ExpressionUUID->"5a02c992-3414-4aab-90a2-c07254f35bda"],
+Cell[18531, 480, 969, 23, 53, "Output",ExpressionUUID->"00f903e1-f3e9-4774-8aaf-2f0fb5a5c315"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
